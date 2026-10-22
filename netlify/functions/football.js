@@ -4,17 +4,17 @@ const apiKey = process.env.API_FOOTBALL_KEY;
 if (!apiKey) {
 return {
 statusCode: 500,
-headers: { “Content-Type”: “application/json” },
-body: JSON.stringify({ error: “API key is missing” })
+headers: { "Content-Type": "application/json" },
+body: JSON.stringify({ error: "API key is missing" })
 };
 }
 
 try {
 const response = await fetch(
-“https://v3.football.api-sports.io/fixtures?date=2026-10-22”,
+"https://v3.football.api-sports.io/fixtures?date=2026-10-22",
 {
 headers: {
-“x-apisports-key”: apiKey
+"x-apisports-key": apiKey
 }
 }
 );
@@ -32,8 +32,9 @@ return {
 } catch (error) {
 return {
 statusCode: 500,
-headers: { “Content-Type”: “application/json” },
-body: JSON.stringify({ error: “Could not load matches” })
+headers: { "Content-Type": "application/json" },
+body: JSON.stringify({ error: "Could not load matches" })
 };
 }
 };
+       
