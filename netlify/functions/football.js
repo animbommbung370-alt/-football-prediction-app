@@ -5,7 +5,7 @@ if (!apiKey) {
 return {
 statusCode: 500,
 headers: { "Content-Type": "application/json" },
-body: JSON.stringify({ error: “API key is missing” })
+body: JSON.stringify({ error: "API key is missing" })
 };
 }
 
