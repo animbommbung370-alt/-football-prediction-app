@@ -4,7 +4,7 @@ const apiKey = process.env.API_FOOTBALL_KEY;
 if (!apiKey) {
 return {
 statusCode: 500,
-headers: { “Content-Type": "application/json" },
+headers: { "Content-Type": "application/json" },
 body: JSON.stringify({ error: “API key is missing” })
 };
 }
